@@ -1,13 +1,114 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.shopping-cart {
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+.shopping-cart:hover {
+  border-radius: 10px;
+  border: 3px solid #3333339f;
+  color: #171717c5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hero-section {
+  min-width: 300px;
+}
+.card-container {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.2fr));
+}
+.testimonies {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+input[name='quantity'] {
+  width: 45px;
+  border: solid 1px #3333336a;
+  border-radius: 5px;
+  padding: 4px 2px;
+  outline: none;
+  font-weight: lighter;
+}
+input[name='quantity']:focus {
+  border: solid 2px #3333336a;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 100px;
+  justify-items: center;
+  align-items: end;
+  justify-content: center;
+}
+.cards-container .card {
+  height: 400px;
+}
+.pagination li {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.137) 0 3px 3px -1px,
+    rgba(0, 0, 0, 0.093) 0 6px 10px 0, rgba(0, 0, 0, 0.06) 0 1px 14px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-size: 14px;
+  font-weight: bold;
+  height: 20px;
+  width: 27px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform, opacity;
+  z-index: 0;
+  border: 1px solid #333;
+}
+hr.border-solid {
+  padding: 1px;
+}
+
+/*___________________________________ table _________________________________________________ */
+
+table.GeneratedTable {
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+table.GeneratedTable td,
+table.GeneratedTable th {
+  padding: 10px;
+  text-align: center;
+}
+table.GeneratedTable td {
+  padding-bottom: 25px;
+}
+table.GeneratedTable th {
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+}
+
+table.GeneratedTable thead {
+  background-color: #ffffff;
+}
+td .laptop-img {
+  max-width: 150px;
 }
