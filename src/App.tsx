@@ -5,7 +5,7 @@ import ShopPage from './components/ShopPage';
 import AboutPage from './components/AboutPage';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { laptop } from './components/data';
 
 type bucketType = {
@@ -17,7 +17,7 @@ function App() {
   const [buckets, setBuckets] = useState<bucketType[]>([]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Nav />
       <Routes>
         <Route path="/" element={<Main />}></Route>
@@ -34,7 +34,7 @@ function App() {
         ></Route>
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
